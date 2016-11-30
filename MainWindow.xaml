@@ -1,0 +1,40 @@
+﻿<Window x:Class="WPFOpengl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF"
+        xmlns:local="clr-namespace:WPFOpengl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900">
+    <Grid>
+        <wpf:OpenGLControl OpenGLDraw="OpenGLControl_OpenGLDraw"
+                               OpenGLInitialized="OpenGLControl_OpenGLInitialized"
+                               Resized="OpenGLControl_Resized"
+                               DrawFPS="True" Margin="0,0,160,0"/>
+        <Grid HorizontalAlignment="Left" Height="449" Margin="737,10,0,0" VerticalAlignment="Top" Width="155">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="61*"/>
+                <RowDefinition Height="28*"/>
+                <RowDefinition Height="360*"/>
+            </Grid.RowDefinitions>
+            <Slider x:Name="slider" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Width="125"/>
+            <Slider x:Name="slider_Copy" HorizontalAlignment="Left" Margin="20,33,0,0" VerticalAlignment="Top" Width="125"/>
+            <Label x:Name="Scroller_1" Content="E" HorizontalAlignment="Left" VerticalAlignment="Bottom" Padding="5 0 0 0" Height="18" Width="15" FontSize="11" Margin="0,0,0,43"/>
+            <Label x:Name="Scroller_2" Content="N" HorizontalAlignment="Left" VerticalAlignment="Bottom" Padding="5 0 0 0" Height="18" Width="15" FontSize="11" Margin="0,0,0,10"/>
+            <Button x:Name="X_Rey_btn" Content="X-Rey" Padding="0 -1 0 0" HorizontalAlignment="Center" Height="18" Grid.Row="1" VerticalAlignment="Center" Width="80"/>
+            <Label x:Name="Volume_label" Content="Объем" HorizontalAlignment="Left" Height="30" Margin="5,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Volume_content_label" Content="0.003" HorizontalAlignment="Left" Height="30" Margin="81,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Speed_label" Content="Скорость" HorizontalAlignment="Left" Height="30" Margin="5,45,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Speed_content_label" Content="0.04" HorizontalAlignment="Left" Height="30" Margin="81,45,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Mass_label" Content="Масса" HorizontalAlignment="Left" Height="30" Margin="5,80,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Mass_content_label" Content="0.005" HorizontalAlignment="Left" Height="30" Margin="81,80,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Charge_label" Content="Заряд" HorizontalAlignment="Left" Height="30" Margin="5,115,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Charge_content_label" Content="0.1" HorizontalAlignment="Left" Height="30" Margin="81,115,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Gravity_label" Content="Сила тяжести" HorizontalAlignment="Left" Height="30" Margin="5,150,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Gravity_content_label" Content="9.5" HorizontalAlignment="Left" Height="30" Margin="81,150,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Coulomb_force_label" Content="Сила кулона" HorizontalAlignment="Left" Height="30" Margin="5,185,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+            <Label x:Name="Coulomb_force_content_label" Content="0.8" HorizontalAlignment="Left" Height="30" Margin="81,185,0,0" Grid.Row="2" VerticalAlignment="Top" Width="64"/>
+        </Grid>
+    </Grid>
+</Window>
